@@ -17,27 +17,19 @@
 		if($reg2["contra"]==$p){
 			//iniciar sesion
 
-			if ($reg2["idaministrador"]==1) {
+			
 				session_start();
 			
 		
 				$_SESSION["Correo"]=$reg2["correo"];
 				$_SESSION["Nombre"]=$reg2["nombre"];
 				$_SESSION["Apellido"]=$reg2["apellido"];
+				$_SESSION["rol"]=$reg2["rol"];
 				
 				
 				header("location:../adminResponsive/home.php");
-			}else {
-				session_start();
 			
-		
-				$_SESSION["Correo"]=$reg2["correo"];
-				$_SESSION["Nombre"]=$reg2["nombre"];
-				$_SESSION["Apellido"]=$reg2["apellido"];
-				
-				
-				header("location:../adminResponsive/home2.php");
-			}
+			
 
 			
 			

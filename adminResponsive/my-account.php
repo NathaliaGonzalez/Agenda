@@ -91,9 +91,14 @@
 						<i class="zmdi zmdi-account-add zmdi-hc-fw"></i> Usuarios <i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
-						<li>
-							<a href="admin.php"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
-						</li>
+						<?php
+							if ($_SESSION["rol"]=="primario") {
+								echo '<li>
+								<a href="admin.php"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+								</li>';
+								
+							}
+						?>
 						<li>
 							<a href="alumno.php"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Alumnos</a>
 						</li>

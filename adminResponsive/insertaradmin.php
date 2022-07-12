@@ -26,8 +26,8 @@
         
          
      }else{
-        $sql = "insert into administrador(nombre,apellido,cin,correo,direccion,telefono,contra)
-        values('$nombre','$apellido','$CIN','$correo','$direccion','$telefono','$contra')";
+        $sql = "insert into administrador(nombre,apellido,cin,correo,direccion,telefono,contra,rol)
+        values('$nombre','$apellido','$CIN','$correo','$direccion','$telefono','$contra','secundario')";
         $res = mysqli_query($con, $sql);
         //echo '<script>alert("Registro Exitosos");</script>';
         header('Location:admin.php?e=0');
